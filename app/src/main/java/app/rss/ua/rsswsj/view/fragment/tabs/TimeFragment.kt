@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.setFragmentResultListener
 import app.rss.ua.rsswsj.R
+import app.rss.ua.rsswsj.bundleKey
+import app.rss.ua.rsswsj.fragmentKey
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -28,8 +30,8 @@ class TimeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setFragmentResultListener("requestKey") { key, bundle ->
-            val result = bundle.getString("bundleKey")
+        setFragmentResultListener(fragmentKey) { key, bundle ->
+            val result = bundle.getString(bundleKey)
             tvLabel.text = result
         }
     }

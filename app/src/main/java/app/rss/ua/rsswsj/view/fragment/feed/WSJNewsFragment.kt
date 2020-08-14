@@ -9,9 +9,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.lifecycle.ViewModelProvider
-import app.rss.ua.rsswsj.KEY_RSS_URL
-import app.rss.ua.rsswsj.KEY_TAB_POSITION
-import app.rss.ua.rsswsj.R
+import app.rss.ua.rsswsj.*
 import app.rss.ua.rsswsj.view.activity.WSJActivity
 import app.rss.ua.rsswsj.adapter.RVNewsAdapter
 import app.rss.ua.rsswsj.model.RssFeed
@@ -73,7 +71,7 @@ class WSJNewsFragment : Fragment(), RVNewsAdapter.RVNewsListener {
         activity?.let {
             startActivity(it.intentFor<WSJActivity>(KEY_RSS_URL to rssFeed.link))
             val result = rssFeed.title
-            setFragmentResult("requestKey", bundleOf("bundleKey" to result))
+            setFragmentResult(fragmentKey, bundleOf(bundleKey to result))
 
         }
     }
