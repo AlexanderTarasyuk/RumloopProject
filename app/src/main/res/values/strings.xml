@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">World Street Journal</string>
+
+    <string name="tab_1">Time</string>
+    <string name="tab_2">News</string>
+    <string name="author_name">Author name: AlexTarasyuk</string>
+    <string name="current_date">Current date: %s</string>
+    <string name="current_date_name">Current Date:</string>
+    <string name="last_visited_news_label">last visited news label</string>
+
+</resources>
